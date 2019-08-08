@@ -88,15 +88,13 @@ export default {
           min: 0,
           max: 5000,
           show: true,
-          type: 'value',
-          show: false
+          type: 'value'
         },
         yAxis: {
           min: 0,
           max: 980,
           show: true,
-          type: 'value',
-          show: false
+          type: 'value'
         },
         series: [
           {
