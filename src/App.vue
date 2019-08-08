@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <input type="radio" name="route" value="base" v-model="currentRoute">base
-    <input type="radio" name="route" value="graph" v-model="currentRoute">graph
-    <input type="radio" name="route" value="graph1" v-model="currentRoute">graph1
-    <input type="radio" name="route" value="graph2" v-model="currentRoute">graph2
+    <div style="height: 40px;line-height:40px;text-align:center">
+      <input type="radio" name="route" value="base" v-model="currentRoute">base
+      <input type="radio" name="route" value="graph" v-model="currentRoute">graph
+      <input type="radio" name="route" value="graph1" v-model="currentRoute">graph1
+      <input type="radio" name="route" value="graph2" v-model="currentRoute">graph2
+    </div>
     <router-view/>
   </div>
 </template>
