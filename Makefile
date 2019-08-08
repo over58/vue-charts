@@ -10,6 +10,7 @@ restart:
 
 start:
 	git pull origin master
+	cnpm install 
 	docker build -t ${Repos}:latest  .
 	docker run -d -p ${Port}:80 --name ${Repos} ${Repos}:latest
 rm:	
