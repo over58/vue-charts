@@ -3,6 +3,7 @@ Port := 3000
 Repos :=  vue-charts
 restart:
 	git pull origin master
+	cnpm run build
 	docker rm -f ${Repos}
 	docker rmi ${Repos}:latest
 	docker build -t ${Repos}:latest  .
@@ -10,7 +11,8 @@ restart:
 
 start:
 	git pull origin master
-	cnpm install 
+	cnpm install
+	cnpm run build
 	docker build -t ${Repos}:latest  .
 	docker run -d -p ${Port}:80 --name ${Repos} ${Repos}:latest
 rm:	
